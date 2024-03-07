@@ -1,28 +1,31 @@
+
+#include "./Tree/Tree.h"
 #include <iostream>
-#include "./Tree.h"
 
-int main()
-{
-    Tree *tree = new Tree(5);
+int main() {
+  std::cout << "Inicia";
+  Tree *Arbol = new Tree(5);
 
-    tree->push(3);
-    tree->push(7);
-    tree->push(2);
-    tree->push(4);
+  Arbol->push(3);
+  Arbol->push(7);
+  Arbol->push(2);
+  Arbol->push(4);
 
-    tree->preorderLeft();
+  std::cout << "Preorder(Left): ";
+  Arbol->preorderLeft();
+  std::cout << std::endl;
 
-    std::cout << std::endl;
+  std::cout << "Preorder(Right): ";
+  Arbol->preorderRight();
+  std::cout << std::endl;
 
-    tree->preorderRight();
+  std::cout << "Postorder(Left): ";
+  Arbol->postorderLeft();
+  std::cout << std::endl;
 
-    std::cout << std::endl;
+  std::cout << "Postorder(Right): ";
+  Arbol->postorderRight();
+  std::cout << std::endl;
 
-    tree->postorderIzq();
-
-    std::cout << std::endl;
-
-    tree->postorderRight();
-
-    return 0;
+  return 0;
 }
